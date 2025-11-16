@@ -5,7 +5,7 @@ import UserDropdown from "@/components/header/UserDropdown";
 import { useSidebar } from "@/context/SidebarContext";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState ,useEffect,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const AppHeader: React.FC = () => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false);
@@ -83,22 +83,24 @@ const AppHeader: React.FC = () => {
             {/* Cross Icon */}
           </button>
 
+          {/* --- LOGO VA MAATHIRUKOM (LOGO CHANGED) --- */}
           <Link href="/" className="lg:hidden">
             <Image
-              width={154}
-              height={32}
+              width={170} // Unga puthu logo width
+              height={38} // Unga puthu logo height
               className="dark:hidden"
-              src="./images/logo/logo.svg"
-              alt="Logo"
+              src="/images/logo/radha-govind-logo-full.jpg" // Unga puthu logo path
+              alt="Radha Govind Extractions"
             />
             <Image
-              width={154}
-              height={32}
-              className="hidden dark:block"
-              src="./images/logo/logo-dark.svg"
-              alt="Logo"
+              width={170} // Unga puthu logo width
+              height={38} // Unga puthu logo height
+              className="hidden dark:block" // Inga dark mode kaga 'dark:invert' add pannikonga
+              src="/images/logo/radha-govind-logo-full.jpg" // Unga puthu logo path
+              alt="Radha Govind Extractions"
             />
           </Link>
+          {/* --- LOGO CHANGE MUDINJIDHU (LOGO CHANGE ENDS) --- */}
 
           <button
             onClick={toggleApplicationMenu}
@@ -161,16 +163,15 @@ const AppHeader: React.FC = () => {
           } items-center justify-between w-full gap-4 px-5 py-4 lg:flex shadow-theme-md lg:justify-end lg:px-0 lg:shadow-none`}
         >
           <div className="flex items-center gap-2 2xsm:gap-3">
-            {/* <!-- Dark Mode Toggler --> */}
+            {/* */}
             <ThemeToggleButton />
-            {/* <!-- Dark Mode Toggler --> */}
+            {/* */}
 
-           <NotificationDropdown /> 
-            {/* <!-- Notification Menu Area --> */}
+            <NotificationDropdown />
+            {/* */}
           </div>
-          {/* <!-- User Area --> */}
-          <UserDropdown /> 
-    
+          {/* */}
+          <UserDropdown />
         </div>
       </div>
     </header>
