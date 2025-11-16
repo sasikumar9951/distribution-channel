@@ -89,14 +89,14 @@ const AppHeader: React.FC = () => {
               width={170} // Unga puthu logo width
               height={38} // Unga puthu logo height
               className="dark:hidden"
-              src="/images/logo/radha-govind-logo-full.jpg" // Unga puthu logo path
+              src="/images/logo/radha-govind-logo-full.png" // Unga puthu logo path
               alt="Radha Govind Extractions"
             />
             <Image
               width={170} // Unga puthu logo width
               height={38} // Unga puthu logo height
               className="hidden dark:block" // Inga dark mode kaga 'dark:invert' add pannikonga
-              src="/images/logo/radha-govind-logo-full.jpg" // Unga puthu logo path
+              src="/images/logo/radha-govind-logo-full.png" // Unga puthu logo path
               alt="Radha Govind Extractions"
             />
           </Link>
